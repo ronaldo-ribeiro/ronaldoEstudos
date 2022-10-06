@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     }
 
     func configFontAndColors() {
+        registerButton.isEnabled = false
         view.backgroundColor = .orange
         nameTextField.placeholder = "Digite seu nome:"
         adressTextField.placeholder = "Digite seu endereço:"
@@ -51,7 +52,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
-        
+        print("Cadastro realizado com sucesso")
     }
      
 }
@@ -67,7 +68,12 @@ extension ViewController: UITextFieldDelegate {
         } else {
             textField.layer.borderColor = UIColor.lightGray.cgColor
         }
-            
+        
+        if nameTextField.text == "" || adressTextField.text == "" || passwordTextField.text == "" {
+                    registerButton.isEnabled = false
+                } else {
+                    registerButton.isEnabled = true
+                }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
