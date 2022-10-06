@@ -1,24 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PrimeiroDesafioTextFieldDelegate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu nome:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rdh-Rs-0R2">
+                                <rect key="frame" x="20" y="87" width="350" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="sAz-fD-U2k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite sua senha:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O06-VT-wxM">
+                                <rect key="frame" x="20" y="227" width="350" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="RGD-Gs-H6f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7H-Sg-jsi">
+                                <rect key="frame" x="157.66666666666666" y="332" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tappedRegisterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FiI-IC-shV"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu endereço:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Wf-ai-uvl">
+                                <rect key="frame" x="20" y="157" width="350" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="hdd-Nw-Rss"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rdh-Rs-0R2" secondAttribute="trailing" constant="20" id="0FJ-oy-IBX"/>
+                            <constraint firstItem="O06-VT-wxM" firstAttribute="leading" secondItem="6Wf-ai-uvl" secondAttribute="leading" id="3pe-Q3-knR"/>
+                            <constraint firstItem="rdh-Rs-0R2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4oP-bE-yF0"/>
+                            <constraint firstItem="6Wf-ai-uvl" firstAttribute="trailing" secondItem="rdh-Rs-0R2" secondAttribute="trailing" id="6S5-oR-lqP"/>
+                            <constraint firstItem="O06-VT-wxM" firstAttribute="trailing" secondItem="6Wf-ai-uvl" secondAttribute="trailing" id="DaY-nn-I0W"/>
+                            <constraint firstItem="O06-VT-wxM" firstAttribute="top" secondItem="6Wf-ai-uvl" secondAttribute="bottom" constant="25" id="Ktv-qP-ihd"/>
+                            <constraint firstItem="a7H-Sg-jsi" firstAttribute="top" secondItem="O06-VT-wxM" secondAttribute="bottom" constant="60" id="R1s-dc-we8"/>
+                            <constraint firstItem="6Wf-ai-uvl" firstAttribute="top" secondItem="rdh-Rs-0R2" secondAttribute="bottom" constant="25" id="Tgg-Pf-8wL"/>
+                            <constraint firstItem="rdh-Rs-0R2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="dFy-z5-RJJ"/>
+                            <constraint firstItem="a7H-Sg-jsi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pl9-7T-WQi"/>
+                            <constraint firstItem="6Wf-ai-uvl" firstAttribute="leading" secondItem="rdh-Rs-0R2" secondAttribute="leading" id="vkX-j2-fJ5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="adressTextField" destination="6Wf-ai-uvl" id="Fr9-fx-byN"/>
+                        <outlet property="nameTextField" destination="rdh-Rs-0R2" id="8Qk-HN-ELD"/>
+                        <outlet property="passwordTextField" destination="O06-VT-wxM" id="WdO-GV-WX1"/>
+                        <outlet property="registerButton" destination="a7H-Sg-jsi" id="vHb-zn-El2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="-28"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
