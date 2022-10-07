@@ -22,7 +22,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Botão"/>
                                 <connections>
-                                    <segue destination="DqP-PR-fs2" kind="show" id="6Ub-VT-nzA"/>
+                                    <action selector="tappedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kHj-NA-sdg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -34,22 +34,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1066.1538461538462" y="3.5545023696682461"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="zKz-48-GMq">
-            <objects>
-                <viewController id="DqP-PR-fs2" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xC9-Mt-nOC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="PJb-SS-Yht"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="FsR-5a-9fX"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xij-DK-hQr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2003" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2qE-2Z-ofZ">
@@ -73,9 +57,6 @@
     <resources>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
