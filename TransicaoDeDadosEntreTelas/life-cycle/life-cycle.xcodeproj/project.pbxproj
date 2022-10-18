@@ -13,6 +13,8 @@
 		D10F7F1F28F637A1000D68ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10F7F1D28F637A1000D68ED /* Main.storyboard */; };
 		D10F7F2128F637A3000D68ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D10F7F2028F637A3000D68ED /* Assets.xcassets */; };
 		D10F7F2428F637A3000D68ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10F7F2228F637A3000D68ED /* LaunchScreen.storyboard */; };
+		D1203D2128FF6807004FE6CC /* Tela02VC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1203D2028FF6807004FE6CC /* Tela02VC.storyboard */; };
+		D1203D2328FF6819004FE6CC /* Tela02VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1203D2228FF6819004FE6CC /* Tela02VC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D10F7F2028F637A3000D68ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D10F7F2328F637A3000D68ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D10F7F2528F637A3000D68ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1203D2028FF6807004FE6CC /* Tela02VC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tela02VC.storyboard; sourceTree = "<group>"; };
+		D1203D2228FF6819004FE6CC /* Tela02VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela02VC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				D10F7F2028F637A3000D68ED /* Assets.xcassets */,
 				D10F7F2228F637A3000D68ED /* LaunchScreen.storyboard */,
 				D10F7F2528F637A3000D68ED /* Info.plist */,
+				D1203D2028FF6807004FE6CC /* Tela02VC.storyboard */,
+				D1203D2228FF6819004FE6CC /* Tela02VC.swift */,
 			);
 			path = "life-cycle";
 			sourceTree = "<group>";
@@ -128,6 +134,7 @@
 				D10F7F2428F637A3000D68ED /* LaunchScreen.storyboard in Resources */,
 				D10F7F2128F637A3000D68ED /* Assets.xcassets in Resources */,
 				D10F7F1F28F637A1000D68ED /* Main.storyboard in Resources */,
+				D1203D2128FF6807004FE6CC /* Tela02VC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +147,7 @@
 			files = (
 				D10F7F1C28F637A1000D68ED /* ViewController.swift in Sources */,
 				D10F7F1828F637A1000D68ED /* AppDelegate.swift in Sources */,
+				D1203D2328FF6819004FE6CC /* Tela02VC.swift in Sources */,
 				D10F7F1A28F637A1000D68ED /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

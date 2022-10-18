@@ -18,12 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var lastNameTextField: UITextField!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#function)
-        nameLabel.text = name
-        
         
         
     }
@@ -45,6 +42,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tappedGoSreen02Button(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "Tela02VC", bundle: nil).instantiateViewController(withIdentifier: "Tela02VC") as? Tela02VC
+        
+        vc?.name = "\(nameTextField.text ?? "") \(lastNameTextField.text ?? "")"
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     
