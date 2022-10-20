@@ -22,11 +22,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZA4-2Q-mEI">
+                                <rect key="frame" x="155.33333333333334" y="472.66666666666669" width="79.666666666666657" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Tela 03"/>
+                                <connections>
+                                    <action selector="tappedGoSreen03Button:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6GN-nw-yQU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="WQT-WK-wBi" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="HX7-Kh-Hcc"/>
+                            <constraint firstItem="ZA4-2Q-mEI" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="IiQ-O6-tlU"/>
+                            <constraint firstItem="ZA4-2Q-mEI" firstAttribute="top" secondItem="WQT-WK-wBi" secondAttribute="bottom" constant="40" id="XO1-3P-0nt"/>
                             <constraint firstItem="WQT-WK-wBi" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="lRH-db-iD9"/>
                         </constraints>
                     </view>
