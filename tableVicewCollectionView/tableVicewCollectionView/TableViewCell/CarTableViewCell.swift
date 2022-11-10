@@ -19,39 +19,50 @@ class CarTableViewCell: UITableViewCell {
         return UINib(nibName: self.identifier, bundle: nil)
     }
     
-    var listCar: [String] = ["car1", "car2", "car3", "car4", "car5", "car6"]
+    var data: [String] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
         configCollectionView()
     }
     
     func configCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.scrollDirection = .horizontal
-            layout.estimatedItemSize = .zero
-        }
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.estimatedItemSize = .zero
+        collectionView.collectionViewLayout = layout
         collectionView.register(CarCollectionViewCell.nib(), forCellWithReuseIdentifier: CarCollectionViewCell.identifier)
-        
+    }
+    
+    func setupCell(name: [String], title: String) {
+        self.data = name
+        self.titleLabel.text = title
     }
     
 }
 
-extension CarTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension CarTableViewCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+   
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 300)
+    }
+    
+}
+
+extension CarTableViewCell: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return listCar.count
+        return data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CarCollectionViewCell.identifier, for: indexPath) as? CarCollectionViewCell
-        cell?.setupCell(nameImage: listCar[indexPath.row])
+        cell?.setupCell(nameImage: data[indexPath.row])
         return cell ?? UICollectionViewCell()
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: contentView.frame.width, height: 230)
-    }
     
 }

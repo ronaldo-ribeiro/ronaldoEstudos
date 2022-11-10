@@ -11,6 +11,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var carList: [String] = ["car1", "car2", "car3", "car4", "car5", "car6"]
+    var bikeList: [String] = ["car5","car6"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
@@ -30,12 +33,19 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CarTableViewCell.identifier, for: indexPath) as? CarTableViewCell
-        return cell ?? UITableViewCell()
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: CarTableViewCell.identifier, for: indexPath) as? CarTableViewCell
+            cell?.setupCell(name: carList, title: "Carro")
+            return cell ?? UITableViewCell()
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: CarTableViewCell.identifier, for: indexPath) as? CarTableViewCell
+            cell?.setupCell(name: bikeList, title: "Motocicleta")
+            return cell ?? UITableViewCell()
+        }
     }
 
     
